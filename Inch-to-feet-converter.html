@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<form action="
+">
+
+<div class="card w-25 offset-4 mt-5">
+    <div class="card-header text-center fs-1 bg-warning">*Feet To Inch Convertor*</div>
+  
+  
+  
+    <div class="card-body bg-danger "> 
+      <div class="text-center">
+    <input type="number" class="form-control text-center" id="feet" placeholder="FEET"/>
+    <div class="fs-1">==</div>
+    <input type="number" value="" placeholder="Inch" id="inch" class="text-center form-control">
+</div>
+<button type="reset" class="btn btn-primary mt-4"id="reset">Clear</button> 
+</div>
+</div>
+  </form>
+
+   
+    <script>
+        // this is ipute value
+        let feet = document.getElementById("feet");
+        let inch = document.getElementById("inch");
+
+        // Add the event and call the function
+        feet.addEventListener("input",function () {
+            let fi =this.value;
+            let i = fi*12
+            inch.value=i;
+            
+        })
+        inch.addEventListener("input",function () {
+            let i =this.value;
+            let fi = i/12
+            if (!Number.isInteger(fi)) {
+               fi=fi.toFixed(2);
+            };
+            feet.value=fi;
+        
+        })
+        // AND project is ready
+        
+      
+            </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
